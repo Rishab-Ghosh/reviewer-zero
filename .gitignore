@@ -1,0 +1,52 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Downloaded / generated data (reproducible from the pipeline)
+data/papers/arxiv/*.pdf
+data/cache/*
+!data/cache/.gitkeep
+# Own papers stay local unless you choose to commit them
+data/papers/own/*.pdf
+data/private/
+
+# Anything derived from data/private/ or data/papers/own/ must never be committed.
+data/parsed/own-*
+data/claims/own-*
+data/claims_strong/own-*
+data/claims_v*/own-*
+# OpenReview dev-run papers (or-<submission id>): full text, claims and parses of real,
+# copyrighted ICLR submissions, never public.
+data/parsed/or-*
+data/claims/or-*
+data/novelty/or-*
+# Claim-set run outputs (claims_v3+). claims_v1/ and claims_v2/ were committed before this rule
+# and stay tracked; ignoring does not untrack them.
+data/claims_v*/
+reports/private/
+# Failure log can name own papers; public failures are summarized in STATUS.md instead.
+data/failures.jsonl
+
+# Citation checker output (regenerate with `reviewer citations` / `citations-summary`)
+reports/citations/
+
+# Format checker output (regenerate with `reviewer format` / `format-summary`)
+reports/format/
+reports/writing/
+
+# OpenReview submission PDFs and parses for the methods eval (reproducible, large)
+data/openreview/
+
+# meta-reviewer lite mode: scratch top-N-claims copy fed to the novelty checker
+data/claims_meta_lite/
+.arena/
+
+# Per-environment secrets for Compose (deploy/local.env, deploy/server.env)
+deploy/*.env
+
+# Build output
+dist/

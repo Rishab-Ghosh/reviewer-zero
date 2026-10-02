@@ -1,0 +1,87 @@
+{
+  "phase": "plan",
+  "estimate_usd": 1.46,
+  "limit_usd": 2.9,
+  "steps_to_run": [
+    "parse",
+    "format",
+    "citations",
+    "claims",
+    "novelty",
+    "methods",
+    "writing",
+    "meta"
+  ],
+  "steps_already_done": [],
+  "spent_usd": null,
+  "steps": [],
+  "findings": null,
+  "format": {
+    "venue": "iclr2027",
+    "stage": "submission",
+    "rules": "ICLR 2027",
+    "text_engine": "pdftotext",
+    "author_names_from": "grobid",
+    "detected_header": {
+      "venue": "ICLR",
+      "stage": "submission",
+      "year": 2027,
+      "text": "Under review as a conference paper at ICLR 2027"
+    },
+    "n_pages": 4,
+    "main_text_pages": 2.85,
+    "page_limit": 9,
+    "findings": [
+      {
+        "check": "author_block",
+        "severity": "violation",
+        "detail": "author names or affiliations printed above the abstract",
+        "venue": null,
+        "page": 1,
+        "evidence": [
+          "names on page 1: Nemo Quillfeather, Ada Placeholder",
+          "affiliation line: Institute for Imaginary Learning, University of Nowhere"
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      },
+      {
+        "check": "required_section",
+        "severity": "violation",
+        "detail": "ICLR 2027: AI use statement (required) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"we require authors to disclose AI use in a mandatory section in their paper (this section will not be counted towards the page limit)\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AIPolicyForAuthors"
+      },
+      {
+        "check": "recommended_section",
+        "severity": "info",
+        "detail": "ICLR 2027: Ethics statement (encouraged) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"The optional ethics statement will not count toward the page limit, but should not be more than 1 page.\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      },
+      {
+        "check": "recommended_section",
+        "severity": "info",
+        "detail": "ICLR 2027: Reproducibility statement (encouraged) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"strongly encouraged to include a paragraph-long Reproducibility Statement at the end of the main text (before references)\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      }
+    ],
+    "notes": []
+  },
+  "meta_review": null,
+  "notes": [
+    "About $1.46, never more than $2.90, on your Anthropic key. Ask the user, then call review_paper again with confirm=true."
+  ]
+}

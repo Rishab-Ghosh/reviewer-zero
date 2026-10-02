@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: local
+    hooks:
+      - id: privacy-guard
+        name: block private / own-paper derivatives
+        entry: uv run python -m reviewer.privacy
+        language: system
+        pass_filenames: true

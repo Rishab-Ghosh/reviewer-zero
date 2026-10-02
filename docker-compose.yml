@@ -1,0 +1,20 @@
+name: reviewer
+
+# GROBID 0.9.1 (latest official release, 2026-08). The deep-learning "-full" image
+# (grobid/grobid:0.9.1-full) is published for linux/amd64 only and would run under emulation
+# on Apple Silicon, so we use the official CRF-only image, which has a native linux/arm64
+# variant. Pinned by tag and multi-arch index digest.
+services:
+  grobid:
+    image: grobid/grobid:0.9.1-crf@sha256:223957791ac2bbe48609dcc58a689b16b60baeae13a8734ef440ae6bfb38f4cd
+    init: true
+    ports:
+      - "8070:8070"
+    mem_limit: 6g
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8070/api/isalive"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s

@@ -1,0 +1,501 @@
+{
+  "phase": "review",
+  "estimate_usd": 0.0,
+  "limit_usd": 0.0,
+  "steps_to_run": [],
+  "steps_already_done": [
+    "parse",
+    "format",
+    "citations",
+    "claims",
+    "novelty",
+    "methods",
+    "writing",
+    "meta"
+  ],
+  "spent_usd": 0.0,
+  "steps": [
+    {
+      "step": "parse",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "format",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "citations",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "claims",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "methods",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "writing",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "novelty",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "meta",
+      "status": "done",
+      "cost_usd": 0.0,
+      "error_kind": null
+    }
+  ],
+  "findings": {
+    "claims": [
+      {
+        "index": 1,
+        "statement": "SPINDLE, which adds a low-rank injected update W = W0 + (\u03b1/r)BA to the query and value attention projections while freezing pretrained weights, outperforms full fine-tuning on all eight GLUE tasks with RoBERTa-base while training only 0.24% of the parameters (e.g. 95.1 vs 94.8 on SST-2, 80.1 vs 78.7 on RTE, 64.1 vs 63.6 on CoLA)."
+      },
+      {
+        "index": 2,
+        "statement": "An ablation on RoBERTa-base shows SPINDLE's performance on SST-2, RTE, and CoLA increases with rank r from 1 to 8 (e.g. RTE 77.3\u219280.1, CoLA 61.5\u219264.1) but slightly declines or plateaus when r is further increased to 16 (RTE 79.8, CoLA 63.9), indicating diminishing returns beyond r=8."
+      }
+    ],
+    "prior_work": [
+      {
+        "claim": "SPINDLE, which adds a low-rank injected update W = W0 + (\u03b1/r)BA to the query and value attention projections while freezing pretrained weights, outperforms full fine-tuning on all eight GLUE tasks with RoBERTa-base while training only 0.24% of the parameters (e.g. 95.1 vs 94.8 on SST-2, 80.1 vs 78.7 on RTE, 64.1 vs 63.6 on CoLA).",
+        "possible_prior_claim": {
+          "work": "2106.09685",
+          "reason": "LoRA already introduced the identical frozen-weight W0+(\u03b1/r)BA update on query/value projections, evaluated on RoBERTa-base GLUE against adapters, BitFit and prefix-tuning, and it matches or beats full fine-tuning; SPINDLE is the same method with the same evaluation."
+        },
+        "works": [
+          {
+            "key": "2106.09685",
+            "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+            "year": 2021,
+            "label": "check first",
+            "reason": "LoRA already introduces the exact W0+(\u03b1/r)BA low-rank update frozen-base method applied to RoBERTa-base on GLUE, matching the claim's core contribution."
+          },
+          {
+            "key": "2012.13255",
+            "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
+            "year": 2020,
+            "label": "builds on",
+            "reason": "Provides the intrinsic-dimensionality motivation for low-rank reparameterization of RoBERTa that SPINDLE's low-rank injected update builds upon."
+          },
+          {
+            "key": "2110.04366",
+            "title": "Towards a Unified View of Parameter-Efficient Transfer Learning",
+            "year": 2021,
+            "label": "close",
+            "reason": "Offers a unifying framework for PEFT methods including low-rank-style modifications, overlapping conceptually but not presenting the specific BA low-rank injection or GLUE result."
+          },
+          {
+            "key": "1902.00751",
+            "title": "Parameter-Efficient Transfer Learning for NLP",
+            "year": 2019,
+            "label": "close",
+            "reason": "Same problem (parameter-efficient fine-tuning of GLUE with frozen pretrained weights) but uses bottleneck adapter modules rather than low-rank query/value injection."
+          },
+          {
+            "key": "2106.04647",
+            "title": "Compacter: Efficient Low-Rank Hypercomplex Adapter Layers",
+            "year": 2021,
+            "label": "close",
+            "reason": "Uses low-rank and hypercomplex parameterization for adapters (a related low-rank PEFT component) but inserts separate adapter layers rather than low-rank updates to Q/V projections."
+          },
+          {
+            "key": "2207.03509",
+            "title": "Meta-Learning the Difference: Preparing Large Language Models for Efficient Adaptation",
+            "year": 2022,
+            "label": "close",
+            "reason": "Employs a dynamic low-rank reparameterization of weights as a core component, overlapping with SPINDLE's low-rank update mechanism though in a meta-learning adaptation context."
+          },
+          {
+            "key": "2106.10199",
+            "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+            "year": 2021,
+            "label": "close",
+            "reason": "Same PEFT goal and frozen-weight setting but tunes only bias terms rather than injecting low-rank updates."
+          },
+          {
+            "key": "2101.00190",
+            "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+            "year": 2021,
+            "label": "close",
+            "reason": "Same PEFT problem with frozen backbone but uses continuous prefix vectors rather than low-rank BA updates to attention projections."
+          },
+          {
+            "key": "2012.07463",
+            "title": "Parameter-Efficient Transfer Learning with Diff Pruning",
+            "year": 2020,
+            "label": "close",
+            "reason": "Proposes diff pruning as an alternative parameter-efficient fine-tuning method matching full fine-tuning on GLUE with sparse diff vectors rather than low-rank BA updates."
+          },
+          {
+            "key": "2403.13269",
+            "title": "AFLoRA: Adaptive Freezing of Low Rank Adaptation in Parameter Efficient Fine-Tuning of Large Models",
+            "year": 2024,
+            "label": "close",
+            "reason": "Applies the same low-rank down/up projection matrices to frozen weights on GLUE but adds an adaptive freezing schedule, differing in mechanism from the claim's static low-rank update."
+          }
+        ]
+      },
+      {
+        "claim": "An ablation on RoBERTa-base shows SPINDLE's performance on SST-2, RTE, and CoLA increases with rank r from 1 to 8 (e.g. RTE 77.3\u219280.1, CoLA 61.5\u219264.1) but slightly declines or plateaus when r is further increased to 16 (RTE 79.8, CoLA 63.9), indicating diminishing returns beyond r=8.",
+        "possible_prior_claim": null,
+        "works": [
+          {
+            "key": "2106.09685",
+            "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+            "year": 2021,
+            "label": "builds on",
+            "reason": "LoRA is the foundational low-rank adaptation method whose rank hyperparameter SPINDLE's ablation builds upon and extends."
+          },
+          {
+            "key": "2602.10212",
+            "title": "Rank-Accuracy Trade-off for LoRA: A Gradient-Flow Analysis",
+            "year": 2026,
+            "label": "close",
+            "reason": "Theoretically analyzes the same rank-accuracy trade-off for LoRA updates, though via gradient-flow theory rather than empirical ablation on SST-2/RTE/CoLA."
+          },
+          {
+            "key": "2303.10512",
+            "title": "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning",
+            "year": 2023,
+            "label": "close",
+            "reason": "AdaLoRA studies budget allocation across rank/singular values in low-rank updates, closely related to rank-performance tradeoffs though via adaptive allocation rather than fixed-rank ablation."
+          },
+          {
+            "key": "2403.09113",
+            "title": "AutoLoRA: Automatically Tuning Matrix Ranks in Low-Rank Adaptation Based on Meta Learning",
+            "year": 2024,
+            "label": "close",
+            "reason": "Addresses automatically tuning LoRA rank per layer, overlapping with the rank-sensitivity analysis theme but via a different meta-learning mechanism rather than a manual rank sweep ablation."
+          },
+          {
+            "key": "2012.13255",
+            "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
+            "year": 2020,
+            "label": "close",
+            "reason": "Studies low-dimensional reparameterization for fine-tuning performance but does not ablate SPINDLE's rank parameter or report its diminishing-returns pattern."
+          },
+          {
+            "key": "2504.00254",
+            "title": "ElaLoRA: Elastic & Learnable Low-Rank Adaptation for Efficient Model Fine-Tuning",
+            "year": 2025,
+            "label": "close",
+            "reason": "Studies dynamic rank pruning/expansion and its effect on performance, closely related to the claim's rank-vs-performance ablation component."
+          },
+          {
+            "key": "2408.03290",
+            "title": "SARA: Singular-Value Based Adaptive Low-Rank Adaption",
+            "year": 2024,
+            "label": "close",
+            "reason": "Also studies how adaptive rank selection in low-rank fine-tuning affects performance, a core component the claim's rank ablation relies on."
+          },
+          {
+            "key": "2405.17357",
+            "title": "DoRA: Enhancing Parameter-Efficient Fine-Tuning with Dynamic Rank Distribution",
+            "year": 2024,
+            "label": "close",
+            "reason": "Studies dynamic rank allocation across weight matrices in LoRA-like adapters, a related but distinct approach to rank-performance tradeoffs."
+          },
+          {
+            "key": "2405.12130",
+            "title": "MoRA: High-Rank Updating for Parameter-Efficient Fine-Tuning",
+            "year": 2024,
+            "label": "close",
+            "reason": "Analyzes how rank size affects LoRA-style updates' learning capacity, overlapping with the claim's rank-performance relationship."
+          },
+          {
+            "key": "2407.07802",
+            "title": "ROSA: Random Subspace Adaptation for Efficient Fine-Tuning",
+            "year": 2024,
+            "label": "close",
+            "reason": "ROSA studies arbitrary-rank low-rank adaptation subspaces on RoBERTa/GLUE tasks, overlapping in the key component of varying adaptation rank, though mechanism and findings differ."
+          }
+        ]
+      }
+    ],
+    "methodology": [
+      {
+        "item": "baseline_tuning",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "SPINDLE's rank, injection sites and learning rate were selected by experiment while the baselines were left untuned, so the claimed wins over full fine-tuning and the other PEFT methods may reflect unequal tuning effort.",
+        "quotes": [
+          "We did not tune the baselines ourselves and used the hyperparameters recommended by their authors, which may favor SPINDLE.",
+          "each trained with the recipe recommended by its authors"
+        ]
+      },
+      {
+        "item": "seeds_variance",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "Single-seed results on GLUE, where RTE, MRPC and CoLA are known to vary by several points across seeds, cannot support the per-task comparisons.",
+        "quotes": [
+          "All numbers come from a single training run with random seed 0.",
+          "Table 1: GLUE development-set results with RoBERTa-base (single run, seed 0)."
+        ]
+      },
+      {
+        "item": "significance",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "The claim of statistical robustness rests on single-run gains of a few tenths of a point with no test or variance estimate.",
+        "quotes": [
+          "These improvements are statistically robust.",
+          "The largest gains are on the small datasets RTE (+1.4) and CoLA (+0.5), where full fine-tuning overfits."
+        ]
+      },
+      {
+        "item": "leakage",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "Model configuration was selected on the same dev sets used for the final reported numbers, which inflates SPINDLE's scores.",
+        "quotes": [
+          "Performance saturates at r = 8, which we use throughout.",
+          "Injecting into the query and value projections gave the best results in preliminary experiments; injecting into all four projections at the same total parameter budget was slightly worse on RTE.",
+          "Injecting into the query and value projections gave the best results in preliminary experiments"
+        ]
+      },
+      {
+        "item": "compute_matched",
+        "verdict": "unclear",
+        "agreement": "",
+        "concern": "No epochs or training steps are reported for any method, so differences in training budget cannot be ruled out as a source of the gains.",
+        "quotes": [
+          "We use AdamW (Loshchilov and Hutter, 2019) with a linear schedule, batch size 32, and a learning rate of 5 \u00d7 10 -4 for SPINDLE."
+        ]
+      },
+      {
+        "item": "ablation_isolation",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "The zero-initialization contribution and the projection choice are credited without any quantitative ablation against alternatives.",
+        "quotes": [
+          "A training recipe that makes the injected update start from zero, so training begins exactly at the pretrained model.",
+          "Table 2: Effect of the rank r on RoBERTa-base (single run, seed 0).",
+          "injecting into all four projections at the same total parameter budget was slightly worse on RTE"
+        ]
+      },
+      {
+        "item": "hparam_disclosure",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "The search behind SPINDLE's learning rate, \u03b1 and injection choices is not disclosed, so the tuning advantage over untuned baselines cannot be assessed.",
+        "quotes": [
+          "SPINDLE uses r = 8 and \u03b1 = 16."
+        ]
+      },
+      {
+        "item": "claims_support",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "The headline claim of beating full fine-tuning on every GLUE task is contradicted by the paper's own Table 1 on MNLI and QQP.",
+        "quotes": [
+          "outperforms full fine-tuning on every task of the GLUE benchmark",
+          "Full fine-tuning | 100% | 87.6 | 94.8 | 90.2 | 63.6 | 92.8 | 91.9 | 78.7 | 91.2",
+          "SPINDLE (ours) | 0.24% | 86.9 | 95.1 | 90.8 | 64.1 | 93.0 | 90.6 | 80.1 | 91.4"
+        ]
+      },
+      {
+        "item": "evaluation_scope",
+        "verdict": "no",
+        "agreement": "confirmed",
+        "concern": "Claims about adapting large language models rest on a single 125M encoder evaluated on one classification benchmark.",
+        "quotes": [
+          "We evaluate one model size and one benchmark.",
+          "We hope SPINDLE becomes a standard baseline for adapting large language models."
+        ]
+      }
+    ],
+    "writing": [
+      {
+        "check": "abstract_overclaim",
+        "quote": "We introduce SPINDLE, a new parameter-efficient fine-tuning method that freezes the pretrained weights and edits each attention projection through a trainable low-dimensional injected update",
+        "location": "abstract",
+        "detail": "overstated: The abstract says each attention projection is edited, but the method as evaluated injects updates only into the query and value projections."
+      },
+      {
+        "check": "abstract_overclaim",
+        "quote": "outperforms full fine-tuning on every task of the GLUE benchmark",
+        "location": "abstract",
+        "detail": "overstated: Table 1 shows SPINDLE below full fine-tuning on MNLI (86.9 vs 87.6) and QQP (90.6 vs 91.9), so it does not win on every task."
+      },
+      {
+        "check": "abstract_overclaim",
+        "quote": "Our results are statistically robust",
+        "location": "abstract",
+        "detail": "overstated: A single seed with no variance estimates or significance tests cannot support a claim of statistical robustness."
+      },
+      {
+        "check": "abstract_overclaim",
+        "quote": "establish SPINDLE as the first method to match and exceed full fine-tuning at this parameter budget",
+        "location": "abstract",
+        "detail": "overstated: The paper offers only a hedged novelty statement, and Table 1 shows SPINDLE does not exceed full fine-tuning on MNLI and QQP. The claim that it is the first such method is therefore not established."
+      },
+      {
+        "check": "caption_not_standalone",
+        "quote": "GLUE development-set results with RoBERTa-base (single run, seed 0). Trainable parameters are given as a fraction of the model",
+        "location": "Table 1",
+        "detail": "The caption does not state the per-task metrics (accuracy, Matthews correlation, F1, Pearson), which are given only in the text."
+      },
+      {
+        "check": "caption_not_standalone",
+        "quote": "Effect of the rank r on RoBERTa-base (single run, seed 0",
+        "location": "Table 2",
+        "detail": "The caption does not give the metric for each task or the dev-set setting. It also does not say that Params is the fraction of trainable parameters."
+      }
+    ],
+    "citations": {
+      "flags": [],
+      "possible_contradictions": []
+    }
+  },
+  "format": {
+    "venue": "iclr2027",
+    "stage": "submission",
+    "rules": "ICLR 2027",
+    "text_engine": "pdftotext",
+    "author_names_from": "grobid",
+    "detected_header": {
+      "venue": "ICLR",
+      "stage": "submission",
+      "year": 2027,
+      "text": "Under review as a conference paper at ICLR 2027"
+    },
+    "n_pages": 4,
+    "main_text_pages": 2.85,
+    "page_limit": 9,
+    "findings": [
+      {
+        "check": "author_block",
+        "severity": "violation",
+        "detail": "author names or affiliations printed above the abstract",
+        "venue": null,
+        "page": 1,
+        "evidence": [
+          "names on page 1: Nemo Quillfeather, Ada Placeholder",
+          "affiliation line: Institute for Imaginary Learning, University of Nowhere"
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      },
+      {
+        "check": "required_section",
+        "severity": "violation",
+        "detail": "ICLR 2027: AI use statement (required) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"we require authors to disclose AI use in a mandatory section in their paper (this section will not be counted towards the page limit)\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AIPolicyForAuthors"
+      },
+      {
+        "check": "recommended_section",
+        "severity": "info",
+        "detail": "ICLR 2027: Ethics statement (encouraged) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"The optional ethics statement will not count toward the page limit, but should not be more than 1 page.\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      },
+      {
+        "check": "recommended_section",
+        "severity": "info",
+        "detail": "ICLR 2027: Reproducibility statement (encouraged) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"strongly encouraged to include a paragraph-long Reproducibility Statement at the end of the main text (before references)\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      }
+    ],
+    "notes": []
+  },
+  "meta_review": {
+    "checks": [
+      {
+        "checker": "claims",
+        "ok": true
+      },
+      {
+        "checker": "novelty",
+        "ok": true
+      },
+      {
+        "checker": "citations",
+        "ok": true
+      },
+      {
+        "checker": "methods",
+        "ok": true
+      },
+      {
+        "checker": "format",
+        "ok": true
+      },
+      {
+        "checker": "writing",
+        "ok": true
+      }
+    ],
+    "summary": "The paper proposes SPINDLE, a PEFT method that freezes pretrained weights and adds a trainable low-rank update (\u03b1/r)BA to the query and value projections.\nB is zero-initialised and the update is merged into the weights after training.\nOn RoBERTa-base/GLUE (single seed), the paper claims SPINDLE trains 0.24% of parameters, adds no inference latency, beats full fine-tuning on every GLUE task, and is the first method to do so at this budget.\nA rank ablation (r=1..16) on three tasks shows saturation at r=8.",
+    "sink": [
+      {
+        "text": "All results come from a single seed with no variance and no significance test, yet the paper asserts the results are 'statistically robust'. Most gains over full fine-tuning are 0.2\u20130.6 points, on tasks such as RTE, MRPC and CoLA that are known to vary by points across seeds.",
+        "evidence": []
+      },
+      {
+        "text": "The evaluation protocol is unequal in two ways. First, SPINDLE's rank, injection sites and learning rate were selected on the same dev sets that are reported, while the baselines were left untuned. Second, the search ranges and training budgets (epochs, steps) are undisclosed for every method.",
+        "evidence": []
+      },
+      {
+        "text": "Several claimed contributions and explanations are asserted without evidence:\n- the zero-initialisation recipe, \u03b1/r scaling and projection choice are never quantitatively ablated;\n- the 2.8\u00d7 optimizer-memory saving is never measured;\n- the 'redundant update' and 'overfitting' explanations are unanalysed.",
+        "evidence": []
+      }
+    ],
+    "strengths": [
+      {
+        "text": "The no-inference-latency claim follows directly from merging the low-rank update into W0, and the 0.24% parameter fraction is consistent with Table 1."
+      },
+      {
+        "text": "Datasets, splits and per-task metrics are clearly disclosed, and the background citations are accurate."
+      },
+      {
+        "text": "The rank ablation gives a coherent picture of diminishing returns beyond r=8, though it is single-seed."
+      }
+    ],
+    "questions": [
+      "How does SPINDLE differ in any respect from LoRA (Hu et al., 2021)? Why is LoRA neither cited nor compared against?",
+      "How do you reconcile the 'every GLUE task' claim with Table 1's MNLI and QQP numbers?",
+      "Can you report mean and standard deviation over at least 5 seeds, with significance tests against full fine-tuning?",
+      "Were the rank, injection sites and learning rate selected on the reported dev sets? What was the search space, and were the baselines given an equal search?",
+      "Can you provide measured optimizer memory and a quantitative ablation of the zero-initialisation and \u03b1/r scaling?"
+    ],
+    "would_change_my_mind": "That difference would need to be backed by a head-to-head comparison against LoRA under equal tuning, multi-seed results with variance, and a held-out selection split.\nAbsent that, the paper is a re-presentation of prior work with claims its own table contradicts.",
+    "left_out_note": "1 sentence in 'What would change my mind' was left out because it read as a score or a verdict."
+  },
+  "notes": [
+    "1 sentence in 'What would change my mind' was left out because it read as a score or a verdict."
+  ]
+}

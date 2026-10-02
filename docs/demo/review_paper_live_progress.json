@@ -1,0 +1,50 @@
+[
+  {
+    "t": 0.5,
+    "progress": 1.0,
+    "total": 8.0,
+    "message": "parse: done"
+  },
+  {
+    "t": 0.5,
+    "progress": 2.0,
+    "total": 8.0,
+    "message": "format: done"
+  },
+  {
+    "t": 24.1,
+    "progress": 3.0,
+    "total": 8.0,
+    "message": "writing: done"
+  },
+  {
+    "t": 29.6,
+    "progress": 4.0,
+    "total": 8.0,
+    "message": "citations: done"
+  },
+  {
+    "t": 46.7,
+    "progress": 5.0,
+    "total": 8.0,
+    "message": "methods: done"
+  },
+  {
+    "t": 53.7,
+    "progress": 6.0,
+    "total": 8.0,
+    "message": "claims: done"
+  },
+  {
+    "t": 424.5,
+    "progress": 7.0,
+    "total": 8.0,
+    "message": "novelty: done"
+  },
+  {
+    "t": 450.6,
+    "progress": 8.0,
+    "total": 8.0,
+    "message": "meta: done"
+  }
+]

@@ -1,0 +1,74 @@
+[project]
+name = "reviewer-zero"
+version = "0.1.0"
+description = "Reviewer Zero: an MCP server that checks ML papers before submission (prior work, citations, format, full review)."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+dependencies = [
+    "anthropic>=0.70",
+    "httpx>=0.27",
+    "lxml>=5.2",
+    "mcp>=1.20",
+    "numpy>=2.0",
+    "pdfplumber>=0.11.10",
+    "pydantic>=2.8",
+    "pydantic-settings>=2.4",
+    "pypdf>=5.0",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+]
+
+[project.urls]
+Homepage = "https://tryreviewerzero.com"
+Repository = "https://github.com/rishab-ghosh/reviewer-zero"
+Issues = "https://github.com/rishab-ghosh/reviewer-zero/issues"
+
+[project.optional-dependencies]
+tables = ["docling>=2.130.0"]
+
+[project.scripts]
+reviewer-zero = "reviewer.mcp.server:main"
+reviewer = "reviewer.cli:app"
+reviewer-web = "reviewer.web.cli:app"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=3.7",
+    "pytest>=8.2",
+    "ruff>=0.6",
+    "types-pyyaml>=6.0",
+    "lxml-stubs>=0.5",
+    "pybtex>=0.24",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/reviewer"]
+# the cross-validation folds name dev-set OpenReview submissions; dev eval only (M10)
+exclude = ["src/reviewer/novelty/models/first_stage_lr_cv.json"]
+
+[tool.hatch.build.targets.sdist]
+# Only code and its metadata: never data/ (paper text, claims, gold), docs/, reports/ or tests/
+# fixtures (MCP_PLAN §7.1).
+include = ["/src/reviewer", "/README.md", "/LICENSE", "/pyproject.toml"]
+exclude = ["/src/reviewer/novelty/models/first_stage_lr_cv.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF", "T20", "ANN"]
+ignore = ["ANN401", "RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["ANN", "T20"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

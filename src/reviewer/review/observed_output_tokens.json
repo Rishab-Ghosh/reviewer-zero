@@ -1,0 +1,26 @@
+{
+  "citations": {
+    "max_output_tokens": 5810,
+    "n_responses": 1682
+  },
+  "claims": {
+    "max_output_tokens": 18116,
+    "n_responses": 245
+  },
+  "meta": {
+    "max_output_tokens": 4182,
+    "n_responses": 80
+  },
+  "methods": {
+    "max_output_tokens": 6043,
+    "n_responses": 103
+  },
+  "novelty": {
+    "max_output_tokens": 7491,
+    "n_responses": 2614
+  },
+  "writing": {
+    "max_output_tokens": 4755,
+    "n_responses": 50
+  }
+}

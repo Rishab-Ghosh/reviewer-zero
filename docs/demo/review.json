@@ -1,0 +1,1036 @@
+{
+  "paper": "docs/demo/spindle.pdf (fictional)",
+  "note": "Checker outputs from `reviewer review` (task 1.9) on the local stack. The meta-review and the internal novelty severity score are omitted (MASTER_PLAN D11, D14).",
+  "spent_usd_upper_bound": 1.92, "spent_by_run_usd": [1.548, 0.37],
+  "steps_final_run": [
+    {
+      "step": "parse",
+      "status": "done",
+      "cost_usd": 0.0,
+      "n_calls": 0,
+      "seconds": 0.04,
+      "error_kind": null
+    },
+    {
+      "step": "format",
+      "status": "done",
+      "cost_usd": 0.0,
+      "n_calls": 0,
+      "seconds": 0.25,
+      "error_kind": null
+    },
+    {
+      "step": "citations",
+      "status": "done",
+      "cost_usd": 0.0,
+      "n_calls": 0,
+      "seconds": 1.0,
+      "error_kind": null
+    },
+    {
+      "step": "claims",
+      "status": "done",
+      "cost_usd": 0.0,
+      "n_calls": 0,
+      "seconds": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "methods",
+      "status": "done",
+      "cost_usd": 0.0,
+      "n_calls": 0,
+      "seconds": 0.01,
+      "error_kind": null
+    },
+    {
+      "step": "writing",
+      "status": "done",
+      "cost_usd": 0.0,
+      "n_calls": 0,
+      "seconds": 0.0,
+      "error_kind": null
+    },
+    {
+      "step": "novelty",
+      "status": "done",
+      "cost_usd": 0.250036,
+      "n_calls": 4,
+      "seconds": 62.67,
+      "error_kind": null
+    },
+    {
+      "step": "meta",
+      "status": "done",
+      "cost_usd": 0.11994,
+      "n_calls": 1,
+      "seconds": 24.06,
+      "error_kind": null
+    }
+  ],
+  "format": {
+    "paper_id": "own-spindle-06b1cc9d",
+    "title": "SPINDLE: Sparse-Projection Injected Low-Dimensional Layer Editing for Parameter-Efficient Fine-Tuning *",
+    "private": true,
+    "generated": "2026-09-29T19:23:36.400125Z",
+    "n_pages": 4,
+    "declared": {
+      "venue": "ICLR",
+      "stage": "submission",
+      "year": 2027,
+      "text": "Under review as a conference paper at ICLR 2027"
+    },
+    "pages": [
+      {
+        "venue": "ICLR",
+        "submission_limit": 9,
+        "camera_ready_limit": 10,
+        "main_text_pages": 2.85,
+        "pages_used": 3,
+        "ends_at": "References (p3)"
+      },
+      {
+        "venue": "NeurIPS",
+        "submission_limit": 9,
+        "camera_ready_limit": 10,
+        "main_text_pages": 2.85,
+        "pages_used": 3,
+        "ends_at": "References (p3)"
+      },
+      {
+        "venue": "ICML",
+        "submission_limit": 8,
+        "camera_ready_limit": 9,
+        "main_text_pages": 2.85,
+        "pages_used": 3,
+        "ends_at": "References (p3)"
+      }
+    ],
+    "findings": [
+      {
+        "check": "author_block",
+        "severity": "violation",
+        "detail": "author names or affiliations printed above the abstract",
+        "venue": null,
+        "page": 1,
+        "evidence": [
+          "names on page 1: Nemo Quillfeather, Ada Placeholder",
+          "affiliation line: Institute for Imaginary Learning, University of Nowhere"
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      },
+      {
+        "check": "required_section",
+        "severity": "violation",
+        "detail": "ICLR 2027: AI use statement (required) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"we require authors to disclose AI use in a mandatory section in their paper (this section will not be counted towards the page limit)\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AIPolicyForAuthors"
+      },
+      {
+        "check": "recommended_section",
+        "severity": "info",
+        "detail": "ICLR 2027: Ethics statement (encouraged) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"The optional ethics statement will not count toward the page limit, but should not be more than 1 page.\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      },
+      {
+        "check": "recommended_section",
+        "severity": "info",
+        "detail": "ICLR 2027: Reproducibility statement (encouraged) not found",
+        "venue": "ICLR",
+        "page": null,
+        "evidence": [
+          "rule: \"strongly encouraged to include a paragraph-long Reproducibility Statement at the end of the main text (before references)\""
+        ],
+        "source": "https://iclr.cc/Conferences/2027/AuthorGuidelines"
+      }
+    ],
+    "errors": []
+  },
+  "citations": {
+    "references": [
+      {
+        "ref_id": "b0",
+        "raw_string": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, \u0141ukasz Kaiser, and Illia Polosukhin. Attention is all you need. In Advances in Neural Information Processing Systems, 2015.",
+        "cited_years": [
+          2015
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "Attention Is All You Need",
+          "arxiv_id": "1706.03762",
+          "doi": "10.65215/2q58a426",
+          "source": "openalex"
+        }
+      },
+      {
+        "ref_id": "b1",
+        "raw_string": "Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: Pre-training of deep bidirec- tional transformers for language understanding. In Proceedings of NAACL-HLT, 2019.",
+        "cited_years": [
+          2019
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+          "arxiv_id": "1810.04805",
+          "doi": "10.18653/v1/n19-1423",
+          "source": "index"
+        }
+      },
+      {
+        "ref_id": "b2",
+        "raw_string": "Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov. RoBERTa: A robustly optimized BERT pretraining approach. arXiv preprint arXiv:1907.11692, 2019.",
+        "cited_years": [
+          2019
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+          "arxiv_id": "1907.11692",
+          "doi": null,
+          "source": "index"
+        }
+      },
+      {
+        "ref_id": "b3",
+        "raw_string": "Neil Houlsby, Andrei Giurgiu, Stanislaw Jastrzebski, Bruna Morrone, Quentin de Laroussilhe, Andrea Ges- mundo, Mona Attariyan, and Sylvain Gelly. Parameter-efficient transfer learning for NLP. In International Conference on Machine Learning, 2019.",
+        "cited_years": [
+          2019
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "Parameter-Efficient Transfer Learning for NLP",
+          "arxiv_id": "1902.00751",
+          "doi": null,
+          "source": "index"
+        }
+      },
+      {
+        "ref_id": "b4",
+        "raw_string": "Xiang Lisa Li and Percy Liang. Prefix-tuning: Optimizing continuous prompts for generation. In Proceedings of ACL-IJCNLP, 2021.",
+        "cited_years": [
+          2021
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+          "arxiv_id": "2101.00190",
+          "doi": null,
+          "source": "index"
+        }
+      },
+      {
+        "ref_id": "b5",
+        "raw_string": "Brian Lester, Rami Al-Rfou, and Noah Constant. The power of scale for parameter-efficient prompt tuning. In Proceedings of EMNLP, 2021.",
+        "cited_years": [
+          2021
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+          "arxiv_id": "2104.08691",
+          "doi": "10.18653/v1/2021.emnlp-main.243",
+          "source": "openalex"
+        }
+      },
+      {
+        "ref_id": "b6",
+        "raw_string": "Elad Ben Zaken, Shauli Ravfogel, and Yoav Goldberg. BitFit: Simple parameter-efficient fine-tuning for transformer-based masked language-models. In Proceedings of ACL, 2022.",
+        "cited_years": [
+          2022
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models",
+          "arxiv_id": "2106.10199",
+          "doi": "10.18653/v1/2022.acl-short.1",
+          "source": "index"
+        }
+      },
+      {
+        "ref_id": "b7",
+        "raw_string": "Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R. Bowman. GLUE: A multi-task benchmark and analysis platform for natural language understanding. In International Confer- ence on Learning Representations, 2019.",
+        "cited_years": [
+          2019
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding",
+          "arxiv_id": "1804.07461",
+          "doi": "10.18653/v1/w18-5446",
+          "source": "index"
+        }
+      },
+      {
+        "ref_id": "b8",
+        "raw_string": "Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. In International Conference on Learning Representations, 2019.",
+        "cited_years": [
+          2019
+        ],
+        "flags": [],
+        "resolved": {
+          "title": "Decoupled Weight Decay Regularization",
+          "arxiv_id": "1711.05101",
+          "doi": null,
+          "source": "index"
+        }
+      }
+    ],
+    "support": [
+      {
+        "section_heading": "Introduction",
+        "sentence": "Pretrained Transformers (Vaswani et al., 2015) such as BERT (Devlin et al., 2019) and RoBERTa (Liu et al., 2019) are adapted to downstream tasks by fine-tuning all of their parameters.",
+        "ref_id": "b0",
+        "verdict": "supported",
+        "attributed": "introducing the Transformer architecture (Pretrained Transformers)",
+        "quote": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms",
+        "rationale": "The abstract introduces the Transformer architecture, matching the attribution.",
+        "property_type": "none",
+        "sentence_span": "Pretrained Transformers (Vaswani et al., 2015)",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "Pretrained Transformers (Vaswani et al., 2015) such as BERT (Devlin et al., 2019) and RoBERTa (Liu et al., 2019) are adapted to downstream tasks by fine-tuning all of their parameters.",
+        "ref_id": "b1",
+        "verdict": "supported",
+        "attributed": "introducing BERT",
+        "quote": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers.",
+        "rationale": "The abstract directly introduces BERT, matching the attribution.",
+        "property_type": "none",
+        "sentence_span": "BERT (Devlin et al., 2019)",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "Pretrained Transformers (Vaswani et al., 2015) such as BERT (Devlin et al., 2019) and RoBERTa (Liu et al., 2019) are adapted to downstream tasks by fine-tuning all of their parameters.",
+        "ref_id": "b2",
+        "verdict": "supported",
+        "attributed": "introducing RoBERTa",
+        "quote": "We present a replication study of BERT pretraining (Devlin et al., 2019) that carefully measures the impact of many key hyperparameters and training data size.",
+        "rationale": "The abstract describes RoBERTa as a replication/optimization study of BERT, consistent with introducing RoBERTa as a model.",
+        "property_type": "none",
+        "sentence_span": "RoBERTa (Liu et al., 2019)",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "Adapter modules (Houlsby et al., 2019) insert small bottleneck layers between Transformer sublayers; prefix-tuning (Li and Liang, 2021) and prompt tuning (Lester et al., 2021) learn continuous vectors prepended to the input or the hidden states; BitFit (Ben Zaken et al., 2022) trains only the bias terms.",
+        "ref_id": "b3",
+        "verdict": "supported",
+        "attributed": "adapter modules insert small bottleneck layers between Transformer sublayers",
+        "quote": "we propose transfer with adapter modules. Adapter modules yield a compact and extensible model; they add only a few trainable parameters per task",
+        "rationale": "The abstract confirms adapter modules add small trainable components, consistent with the attribution though not describing bottleneck placement in detail.",
+        "property_type": "none",
+        "sentence_span": "insert small bottleneck layers between Transformer sublayers",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "Adapter modules (Houlsby et al., 2019) insert small bottleneck layers between Transformer sublayers; prefix-tuning (Li and Liang, 2021) and prompt tuning (Lester et al., 2021) learn continuous vectors prepended to the input or the hidden states; BitFit (Ben Zaken et al., 2022) trains only the bias terms.",
+        "ref_id": "b4",
+        "verdict": "supported",
+        "attributed": "prefix-tuning learns continuous vectors prepended to the input or hidden states",
+        "quote": "optimizes a small continuous task-specific vector (called the prefix). Prefix-tuning draws inspiration from prompting, allowing subsequent tokens to attend to this prefix as if it were \"virtual tokens\"",
+        "rationale": "The abstract describes a continuous prefix vector prepended for attention, matching the attribution.",
+        "property_type": "none",
+        "sentence_span": "prefix-tuning (Li and Liang, 2021) ... learn continuous vectors prepended to the input or the hidden states",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "Adapter modules (Houlsby et al., 2019) insert small bottleneck layers between Transformer sublayers; prefix-tuning (Li and Liang, 2021) and prompt tuning (Lester et al., 2021) learn continuous vectors prepended to the input or the hidden states; BitFit (Ben Zaken et al., 2022) trains only the bias terms.",
+        "ref_id": "b5",
+        "verdict": "supported",
+        "attributed": "prompt tuning learns continuous vectors prepended to the input or hidden states",
+        "quote": "we explore \"prompt tuning\", a simple yet effective mechanism for learning \"soft prompts\" to condition frozen language models",
+        "rationale": "The abstract describes learning soft prompts, consistent with continuous vectors prepended to input, matching the attribution.",
+        "property_type": "none",
+        "sentence_span": "prompt tuning (Lester et al., 2021) learn continuous vectors prepended to the input or the hidden states",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "Adapter modules (Houlsby et al., 2019) insert small bottleneck layers between Transformer sublayers; prefix-tuning (Li and Liang, 2021) and prompt tuning (Lester et al., 2021) learn continuous vectors prepended to the input or the hidden states; BitFit (Ben Zaken et al., 2022) trains only the bias terms.",
+        "ref_id": "b6",
+        "verdict": "supported",
+        "attributed": "BitFit trains only the bias terms",
+        "quote": "We introduce BitFit, a sparse-finetuning method where only the bias-terms of the model (or a subset of them) are being modified",
+        "rationale": "The abstract directly confirms that BitFit modifies only bias terms.",
+        "property_type": "none",
+        "sentence_span": "BitFit (Ben Zaken et al., 2022) trains only the bias terms",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Introduction",
+        "sentence": "\u2022 Experiments on GLUE (Wang et al., 2019) showing that SPINDLE outperforms full fine-tuning on every task with 0.24% of the trainable parameters (Section 4).",
+        "ref_id": "b7",
+        "verdict": "supported",
+        "attributed": "introducing the GLUE benchmark used for experiments",
+        "quote": "we introduce the General Language Understanding Evaluation benchmark (GLUE), a tool for evaluating and analyzing the performance of models across a diverse range of existing NLU tasks",
+        "rationale": "The abstract confirms GLUE is the benchmark introduced by this paper, matching the attribution.",
+        "property_type": "none",
+        "sentence_span": "Experiments on GLUE (Wang et al., 2019)",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Related work",
+        "sentence": "Houlsby et al. (2019) insert two bottleneck layers per Transformer block and train only those.",
+        "ref_id": "b3",
+        "verdict": "supported",
+        "attributed": "insert two bottleneck layers per Transformer block and train only those",
+        "quote": "we propose transfer with adapter modules. Adapter modules yield a compact and extensible model; they add only a few trainable parameters per task",
+        "rationale": "The abstract confirms adapter modules are inserted and trained while the rest is fixed, consistent with the attribution, though it doesn't specify the exact count of two per block.",
+        "property_type": "none",
+        "sentence_span": "insert two bottleneck layers per Transformer block and train only those",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Related work",
+        "sentence": "Prefix-tuning (Li and Liang, 2021) learns task-specific key and value prefixes at every layer, and prompt tuning (Lester et al., 2021) learns soft tokens at the input only.",
+        "ref_id": "b5",
+        "verdict": "supported",
+        "attributed": "prompt tuning learns soft tokens at the input only",
+        "quote": "we explore \"prompt tuning\", a simple yet effective mechanism for learning \"soft prompts\" to condition frozen language models to perform specific downstream tasks",
+        "rationale": "The abstract confirms soft prompts are learned to condition the model, consistent with input-level tuning; no conflicting property is stated.",
+        "property_type": "none",
+        "sentence_span": "prompt tuning (Lester et al., 2021) learns soft tokens at the input only",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Experiments",
+        "sentence": "We fine-tune RoBERTa-base (Liu et al., 2019) (125M parameters) on the eight GLUE tasks (Wang et al., 2019).",
+        "ref_id": "b2",
+        "verdict": "supported",
+        "attributed": "introducing/describing RoBERTa-base model",
+        "quote": "We present a replication study of BERT pretraining (Devlin et al., 2019) that carefully measures the impact of many key hyperparameters and training data size.",
+        "rationale": "The abstract describes the RoBERTa model and its pretraining study, consistent with the citation identifying RoBERTa-base.",
+        "property_type": "none",
+        "sentence_span": "RoBERTa-base (Liu et al., 2019)",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Experiments",
+        "sentence": "We fine-tune RoBERTa-base (Liu et al., 2019) (125M parameters) on the eight GLUE tasks (Wang et al., 2019).",
+        "ref_id": "b7",
+        "verdict": "supported",
+        "attributed": "introducing/describing the GLUE benchmark",
+        "quote": "we introduce the General Language Understanding Evaluation benchmark (GLUE), a tool for evaluating and analyzing the performance of models across a diverse range of existing NLU tasks.",
+        "rationale": "The abstract confirms this is the paper introducing the GLUE benchmark referenced for the eight tasks.",
+        "property_type": "none",
+        "sentence_span": "the eight GLUE tasks (Wang et al., 2019)",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Experiments",
+        "sentence": "We use AdamW (Loshchilov and Hutter, 2019) with a linear schedule, batch size 32, and a learning rate of 5 \u00d7 10 -4 for SPINDLE.",
+        "ref_id": "b8",
+        "verdict": "cant_tell_from_abstract",
+        "attributed": "introducing/describing the AdamW optimizer",
+        "quote": "we propose a simple modification to recover the original formulation of weight decay regularization by decoupling the weight decay from the optimization steps taken w.r.t. the loss function",
+        "rationale": "The abstract describes the AdamW method (decoupled weight decay), matching its use as the optimizer cited.",
+        "property_type": "none",
+        "sentence_span": "We use AdamW (Loshchilov and Hutter, 2019)",
+        "judged_by_llm": true,
+        "overridden_from": "supported",
+        "override_reason": "abstract_span not found in the abstract",
+        "verifier_verdict": null
+      },
+      {
+        "section_heading": "Experiments",
+        "sentence": "Baselines are full fine-tuning, adapters (Houlsby et al., 2019 ), BitFit (Ben Zaken et al., 2022 ) and prefix-tuning (Li and Liang, 2021), each trained with the recipe recommended by its authors.",
+        "ref_id": "b3",
+        "verdict": "supported",
+        "attributed": "introducing the adapters method for parameter-efficient fine-tuning",
+        "quote": "we propose transfer with adapter modules. Adapter modules yield a compact and extensible model; they add only a few trainable parameters per task",
+        "rationale": "The abstract describes the adapter module method matching the attribution.",
+        "property_type": "none",
+        "sentence_span": "adapters (Houlsby et al., 2019 )",
+        "judged_by_llm": true,
+        "overridden_from": null,
+        "override_reason": null,
+        "verifier_verdict": null
+      }
+    ]
+  },
+  "claims": [
+    {
+      "statement": "SPINDLE, which adds a trainable low-rank update W0+(\u03b1/r)BA (B\u2208R^{d\u00d7r}, A\u2208R^{r\u00d7k}) to the query and value projections of RoBERTa-base with r=8, \u03b1=16, trains only 0.24% of parameters and outperforms full fine-tuning on 6 of 8 GLUE dev-set tasks (all except MNLI and QQP), even though the paper's own text claims it wins on every task.",
+      "contribution_type": "new_method",
+      "method": "SPINDLE: injects a trainable low-dimensional (rank-r) update BA into the query and value attention projections while keeping pretrained weights W0 frozen, with a scaling factor \u03b1/r and an initialization that starts the update at zero.",
+      "problem": "Parameter-efficient fine-tuning of large pretrained Transformer language models without the storage/training cost of full fine-tuning or the latency/accuracy costs of prior PEFT methods.",
+      "setting": "RoBERTa-base (125M parameters) fine-tuned on all 8 GLUE tasks (MNLI, SST-2, MRPC, CoLA, QNLI, QQP, RTE, STS-B), AdamW optimizer, batch size 32, learning rate 5e-4, r=8, \u03b1=16, single run with seed 0, development-set metrics.",
+      "result": "Table 1: SPINDLE (0.24% params) scores 86.9/95.1/90.8/64.1/93.0/90.6/80.1/91.4 across MNLI/SST-2/MRPC/CoLA/QNLI/QQP/RTE/STS-B, versus full fine-tuning (100% params) at 87.6/94.8/90.2/63.6/92.8/91.9/78.7/91.2. SPINDLE is higher on 6 of 8 tasks (SST-2, MRPC, CoLA, QNLI, RTE, STS-B), but lower on MNLI (86.9 vs 87.6) and QQP (90.6 vs 91.9), contradicting the paper's claim of winning 'on every task'. Largest reported gains are on RTE (+1.4) and CoLA (+0.5).",
+      "novelty_assertion": "The paper asserts SPINDLE is 'the first method to match and exceed full fine-tuning at this parameter budget' and that its results are 'statistically robust,' despite reporting only a single run with a single seed and Table 1 showing losses on 2 of 8 tasks.",
+      "evidence": [
+        "Table 1",
+        "Section 4 Main results",
+        "Abstract",
+        "Contributions statement"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "statement": "A training recipe that initializes the injected low-rank update to produce zero output at the start of training (so training begins exactly at the pretrained model) is proposed as part of SPINDLE.",
+      "contribution_type": "new_method",
+      "method": "Zero-initialization scheme for the low-rank injected update (B initialized to zero, A drawn from a Gaussian) used in SPINDLE so that BA=0 at the start of training.",
+      "problem": "Ensuring the parameter-efficient fine-tuning method starts training from the pretrained model's original behavior rather than a randomly perturbed state.",
+      "setting": "Applied within the SPINDLE method for RoBERTa-base fine-tuning on GLUE tasks, as described in Section 3.",
+      "result": "Qualitative: training begins exactly at the pretrained model's initial state due to the zero-init recipe; no separate ablation numbers are given comparing zero-init vs. non-zero-init.",
+      "novelty_assertion": "Listed as a distinct contribution: 'a training recipe that makes the injected update start from zero,' implying this is a novel design choice of the paper.",
+      "evidence": [
+        "Contributions statement",
+        "Introduction",
+        "Section 3 Method"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "statement": "An ablation over the rank r of the injected low-rank update on RoBERTa-base shows that increasing r from 1 to 8 improves SST-2, RTE and CoLA scores, with r=8 (0.24% params) achieving the best results and r=16 (0.47% params) giving no further improvement.",
+      "contribution_type": "analysis_or_study",
+      "method": "Rank ablation of SPINDLE's low-rank update matrices B and A across r \u2208 {1,4,8,16} on RoBERTa-base.",
+      "problem": "Understanding how the rank of the injected low-dimensional update affects the parameter\u2013performance tradeoff in SPINDLE.",
+      "setting": "RoBERTa-base fine-tuned on SST-2, RTE, and CoLA (GLUE subset), single run with seed 0, varying rank r and corresponding parameter fraction.",
+      "result": "Table 2: r=1 (0.03% params) gives 94.3/77.3/61.5 on SST-2/RTE/CoLA; r=4 (0.12%) gives 94.9/79.4/63.2; r=8 (0.24%) gives 95.1/80.1/64.1; r=16 (0.47%) gives 95.0/79.8/63.9, showing performance saturates and slightly declines beyond r=8.",
+      "novelty_assertion": "No explicit novelty claim beyond supporting the design choice of r=8 for SPINDLE; presented as an internal ablation.",
+      "evidence": [
+        "Table 2",
+        "Section 4"
+      ],
+      "confidence": 0.8
+    }
+  ],
+  "novelty": [
+    {
+      "claim_index": 0,
+      "possible_prior_claim": null,
+      "top10": [
+        {
+          "rank": 1,
+          "key": "2106.09685",
+          "year": 2021,
+          "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+          "label": "builds_on",
+          "reason": "LoRA introduces the low-rank update matrices A and B that SPINDLE's rank ablation is built upon, including its own rank ablation on RoBERTa, but the claim is a specific new ablation extending this foundation."
+        },
+        {
+          "rank": 2,
+          "key": "2607.27680",
+          "year": 2026,
+          "title": "Tight Sample Complexity for Low-Rank Adaptation: Matching Bounds and Rank Selection",
+          "label": "close",
+          "reason": "Presents a similar rank-selection study on LoRA with RoBERTa/SST-2 showing a U-shaped performance curve where over-ranking hurts, matching the claim's saturation/decline finding but for standard LoRA rather than SPINDLE."
+        },
+        {
+          "rank": 3,
+          "key": "2303.10512",
+          "year": 2023,
+          "title": "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning",
+          "label": "close",
+          "reason": "Also studies how rank/parameter budget of low-rank updates affects performance, but via adaptive SVD-based allocation rather than the claim's manual rank sweep ablation."
+        },
+        {
+          "rank": 4,
+          "key": "2609.32002",
+          "year": 2026,
+          "title": "What Does the Rank Buy? A Spectral and Distributional Analysis of Low-Rank Adaptation",
+          "label": "close",
+          "reason": "Provides a theoretical analysis of what rank r controls in LoRA-style updates, directly overlapping the claim's empirical rank ablation theme though via a different (theoretical) approach."
+        },
+        {
+          "rank": 5,
+          "key": "2602.22911",
+          "year": 2026,
+          "title": "CeRA: Breaking the Linear Ceiling of Low-Rank Adaptation with Non-linearity Retained at Inference",
+          "label": "close",
+          "reason": "Also observes diminishing/negative returns from increasing LoRA-style rank, a similar finding but via a different non-linear adapter mechanism and different tasks."
+        },
+        {
+          "rank": 6,
+          "key": "2407.07802",
+          "year": 2024,
+          "title": "ROSA: Random Subspace Adaptation for Efficient Fine-Tuning",
+          "label": "close",
+          "reason": "Proposes an alternative low-rank/subspace PEFT method evaluated on RoBERTa and GLUE, sharing the rank-vs-performance tradeoff theme but with a different adaptation mechanism than SPINDLE."
+        },
+        {
+          "rank": 7,
+          "key": "2402.16842",
+          "year": 2024,
+          "title": "Asymmetry in Low-Rank Adapters of Foundation Models",
+          "label": "close",
+          "reason": "Studies the distinct roles of the same B and A low-rank adapter matrices on RoBERTa, a key component of SPINDLE's update, though it examines asymmetry rather than rank size effects."
+        },
+        {
+          "rank": 8,
+          "key": "2608.26052",
+          "year": 2026,
+          "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
+          "label": "close",
+          "reason": "Directly addresses how much rank LoRA needs via theoretical KL-error bounds, the same underlying question but through theory rather than empirical ablation."
+        },
+        {
+          "rank": 9,
+          "key": "2606.04325",
+          "year": 2026,
+          "title": "Parameter-Efficient Fine-Tuning with Learnable Rank",
+          "label": "close",
+          "reason": "Also investigates how rank of a low-rank adapter affects performance, though it proposes learnable per-layer rank rather than a fixed-rank ablation."
+        },
+        {
+          "rank": 10,
+          "key": "2504.00254",
+          "year": 2025,
+          "title": "ElaLoRA: Elastic & Learnable Low-Rank Adaptation for Efficient Model Fine-Tuning",
+          "label": "close",
+          "reason": "Also investigates how rank allocation across layers affects LoRA performance, sharing the theme of rank-performance tradeoff though using dynamic pruning/expansion rather than fixed rank sweep."
+        }
+      ]
+    },
+    {
+      "claim_index": 1,
+      "possible_prior_claim": {
+        "type": "possible_prior_claim",
+        "work": "2106.09685",
+        "reason": "LoRA already introduced the identical frozen W0+(\u03b1/r)BA update with zero init on query/value projections of RoBERTa-base (r=8, ~0.24% params) and showed it matching or beating full fine-tuning on GLUE, so SPINDLE's core contribution already exists in that one work."
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "key": "2106.09685",
+          "year": 2021,
+          "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+          "label": "check_first",
+          "reason": "LoRA already introduces the identical trainable low-rank BA update (with scaling \u03b1/r) to q/v projections of RoBERTa and shows it matches or beats full fine-tuning on GLUE."
+        },
+        {
+          "rank": 2,
+          "key": "2406.08447",
+          "year": 2024,
+          "title": "The Impact of Initialization on LoRA Finetuning Dynamics",
+          "label": "close",
+          "reason": "Studies the zero-initialization scheme for LoRA's B and A matrices, a key component SPINDLE also relies on."
+        },
+        {
+          "rank": 3,
+          "key": "2312.03732",
+          "year": 2023,
+          "title": "A Rank Stabilization Scaling Factor for Fine-Tuning with LoRA",
+          "label": "close",
+          "reason": "Modifies the same \u03b1/r scaling factor central to SPINDLE's update rule, but proposes a different scaling scheme rather than SPINDLE's exact one."
+        },
+        {
+          "rank": 4,
+          "key": "2606.12883",
+          "year": 2026,
+          "title": "The Hidden Power of Scaling Factor in LoRA Optimization",
+          "label": "close",
+          "reason": "Directly studies the alpha scaling factor in LoRA, a core component of SPINDLE's \u03b1/r scaling mechanism."
+        },
+        {
+          "rank": 5,
+          "key": "2410.02247",
+          "year": 2024,
+          "title": "Theoretical Insights into Fine-Tuning Attention Mechanism: Generalization and Optimization",
+          "label": "close",
+          "reason": "Finds that fine-tuning Wq and Wv matrices is most effective, matching SPINDLE's design choice to inject low-rank updates specifically into query and value projections."
+        },
+        {
+          "rank": 6,
+          "key": "2505.23194",
+          "year": 2025,
+          "title": "Beyond Zero Initialization: Investigating the Impact of Non-Zero Initialization on LoRA Fine-Tuning Dynamics",
+          "label": "close",
+          "reason": "Investigates the zero-initialization convention SPINDLE explicitly uses for its BA update, though for a different research question."
+        },
+        {
+          "rank": 7,
+          "key": "2012.13255",
+          "year": 2020,
+          "title": "Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning",
+          "label": "close",
+          "reason": "Uses low-dimensional reparameterization for fine-tuning similar in spirit to SPINDLE's low-rank update but via random projection rather than trainable BA matrices."
+        },
+        {
+          "rank": 8,
+          "key": "2402.12354",
+          "year": 2024,
+          "title": "LoRA+: Efficient Low Rank Adaptation of Large Models",
+          "label": "close",
+          "reason": "Also modifies LoRA's A/B matrices in q/v projections but focuses on differing learning rates rather than the update rule or GLUE result comparison."
+        },
+        {
+          "rank": 9,
+          "key": "2402.16842",
+          "year": 2024,
+          "title": "Asymmetry in Low-Rank Adapters of Foundation Models",
+          "label": "close",
+          "reason": "Analyzes the same BA decomposition's A and B matrix roles within LoRA adapters, a core component SPINDLE relies on, but for a different research question (asymmetry) not GLUE task-by-task comparison."
+        },
+        {
+          "rank": 10,
+          "key": "2402.09353",
+          "year": 2024,
+          "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+          "label": "close",
+          "reason": "DoRA builds directly on LoRA's low-rank BA update as a key component, decomposing weights into magnitude and direction, differing from SPINDLE's plain low-rank injection."
+        }
+      ]
+    }
+  ],
+  "methods": {
+    "runs": 2,
+    "findings": [
+      {
+        "item": "baseline_tuning",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "SPINDLE uses its own chosen learning rate (5e-4), r=8, and \u03b1=16, the latter two selected via the Table 2 rank sweep. The baselines use author-recommended recipes and were not tuned in this setup, which the Limitations section admits may favor SPINDLE. Rank and injection location were also chosen on the reported dev sets.",
+        "concern": "SPINDLE's configuration was chosen by search on the dev sets while the baselines received no search, so the claimed superiority over full fine-tuning and the other PEFT methods may reflect unequal tuning.",
+        "quotes": [
+          {
+            "quote": "We did not tune the baselines ourselves and used the hyperparameters recommended by their authors, which may favor SPINDLE.",
+            "verified": true
+          },
+          {
+            "quote": "each trained with the recipe recommended by its authors",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "seeds_variance",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "All results in Tables 1 and 2 come from a single run with seed 0. No standard deviation or confidence interval is reported, and no cost reason is given for this, even though RoBERTa-base is cheap to fine-tune.",
+        "concern": "Single-seed numbers on high-variance GLUE tasks such as RTE, CoLA, and MRPC cannot support the reported gains of 0.2\u20131.4 points.",
+        "quotes": [
+          {
+            "quote": "All numbers come from a single training run with random seed 0.",
+            "verified": true
+          },
+          {
+            "quote": "Table 1: GLUE development-set results with RoBERTa-base (single run, seed 0).",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "significance",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "The paper calls the improvements statistically robust without any test, CI, or multiple runs. The gains are small: +0.2 on QNLI and STS-B, +0.5 on CoLA. RTE (+1.4) has only about 277 dev examples.",
+        "concern": "The claim of statistical robustness is unsupported: no test or variance is reported, and the margins are within typical seed variance on small GLUE dev sets.",
+        "quotes": [
+          {
+            "quote": "These improvements are statistically robust.",
+            "verified": true
+          },
+          {
+            "quote": "The largest gains are on the small datasets RTE (+1.4) and CoLA (+0.5), where full fine-tuning overfits.",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "leakage",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "Results are reported on GLUE dev sets, and the same dev sets were evidently used to select the rank (Table 2: 'performance saturates at r = 8, which we use throughout') and the injection location. No separate held-out split is used for selection.",
+        "concern": "Model selection (rank, projection choice) is done on the same GLUE dev sets on which final results are reported, which inflates SPINDLE's numbers relative to the untuned baselines.",
+        "quotes": [
+          {
+            "quote": "on the development sets",
+            "verified": false
+          },
+          {
+            "quote": "Performance saturates at r = 8, which we use throughout.",
+            "verified": true
+          },
+          {
+            "quote": "Injecting into the query and value projections gave the best results in preliminary experiments",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "compute_matched",
+        "verdict": "unclear",
+        "model_verdict": "unclear",
+        "rationale": "Trainable parameter fractions are disclosed in Table 1. Training steps, epochs, and compute budgets for each method are not stated. Parameter budgets differ across methods (0.08% to 0.62%), with no matched-budget comparison.",
+        "concern": "Training budget (epochs, steps) per method is not reported, so it is unknown whether SPINDLE was trained longer or differently than the baselines.",
+        "quotes": [
+          {
+            "quote": "Trainable parameters are given as a fraction of the model.",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": ""
+      },
+      {
+        "item": "ablation_isolation",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "Only rank is ablated (Table 2). The zero-initialization recipe, which is claimed as a contribution, is never ablated, nor is the \u03b1/r scaling. The projection-choice comparison is described only qualitatively from 'preliminary experiments', with no numbers.",
+        "concern": "The claimed zero-initialization contribution and the projection choice are never tested with numbers against alternatives.",
+        "quotes": [
+          {
+            "quote": "A training recipe that makes the injected update start from zero, so training begins exactly at the pretrained model.",
+            "verified": true
+          },
+          {
+            "quote": "injecting into all four projections at the same total parameter budget was slightly worse on RTE.",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "data_disclosure",
+        "verdict": "yes",
+        "model_verdict": "yes",
+        "rationale": "The paper uses the standard GLUE dev sets for RoBERTa-base with stated metrics per task, and the table captions identify the split. Dataset sizes are standard and publicly known.",
+        "concern": "",
+        "quotes": [
+          {
+            "quote": "We report accuracy for MNLI, SST-2, QNLI, QQP and RTE, Matthews correlation for CoLA, F1 for MRPC and Pearson correlation for STS-B, on the development sets.",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": ""
+      },
+      {
+        "item": "hparam_disclosure",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "Only final values are given (lr 5e-4, r=8, \u03b1=16, batch 32). The search over learning rate, \u03b1, epochs, and \u03c3 is not described, and neither are the selection split and budget. The baselines' actual values are not listed.",
+        "concern": "No search space, epoch count, \u03c3, or baseline hyperparameter values are disclosed, so the results cannot be reproduced or the tuning fairness assessed.",
+        "quotes": [
+          {
+            "quote": "We use AdamW (Loshchilov and Hutter, 2019) with a linear schedule, batch size 32, and a learning rate of 5 \u00d7 10 -4 for SPINDLE. SPINDLE uses r = 8 and \u03b1 = 16.",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "claims_support",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "The abstract and conclusion claim SPINDLE outperforms full fine-tuning on every GLUE task, but Table 1 shows it is worse on MNLI (86.9 vs 87.6) and QQP (90.6 vs 91.9). The claim that it 'outperforms all parameter-efficient baselines' also fails on MNLI, where it ties Adapters at 86.9. The statistical robustness claim and the 'first method' claim have no support. The overfitting explanation for the RTE and CoLA gains is never tested.",
+        "concern": "The headline claim of beating full fine-tuning on every GLUE task is contradicted by Table 1 on MNLI and QQP, and the 'statistically robust' and 'first method' claims are unsupported.",
+        "quotes": [
+          {
+            "quote": "outperforms full fine-tuning on every task of the GLUE benchmark",
+            "verified": true
+          },
+          {
+            "quote": "Full fine-tuning | 100% | 87.6 | 94.8 | 90.2 | 63.6 | 92.8 | 91.9 | 78.7 | 91.2",
+            "verified": true
+          },
+          {
+            "quote": "SPINDLE (ours) | 0.24% | 86.9 | 95.1 | 90.8 | 64.1 | 93.0 | 90.6 | 80.1 | 91.4",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      },
+      {
+        "item": "evaluation_scope",
+        "verdict": "no",
+        "model_verdict": "no",
+        "rationale": "Only RoBERTa-base on GLUE is evaluated, as the Limitations section admits. Yet the paper positions SPINDLE for 'large language models' and as the first method to match full fine-tuning at this budget. No larger models, generative tasks, or other benchmarks are tested.",
+        "concern": "Claims about adapting large language models rest on a single 125M encoder and one benchmark.",
+        "quotes": [
+          {
+            "quote": "We evaluate one model size and one benchmark.",
+            "verified": true
+          },
+          {
+            "quote": "We hope SPINDLE becomes a standard baseline for adapting large language models.",
+            "verified": true
+          }
+        ],
+        "downgraded": false,
+        "repaired": false,
+        "violation_codes": [],
+        "agreement": "confirmed"
+      }
+    ],
+    "other_concerns": [
+      {
+        "concern": "The optimizer-memory reduction of about 2.8\u00d7 is stated without any measurement or table, and the 'no inference latency' claim is not benchmarked.",
+        "quotes": [
+          {
+            "quote": "During training it reduces optimizer memory by about 2.8\u00d7 relative to full fine-tuning, since Adam states are kept only for A and B.",
+            "verified": true
+          }
+        ],
+        "verified": true,
+        "repaired": false,
+        "agreement": "possible"
+      },
+      {
+        "concern": "The method, W0 + (\u03b1/r)BA with Gaussian A, zero B, and query/value injection, appears identical to LoRA, which is neither cited nor compared against, so the novelty claim and the 'first method' claim are doubtful.",
+        "quotes": [
+          {
+            "quote": "W = W 0 + \u03b1 r BA, B \u2208 R d\u00d7r , A \u2208 R r\u00d7k , r \u226a min(d, k).",
+            "verified": true
+          },
+          {
+            "quote": "establish SPINDLE as the first method to match and exceed full fine-tuning at this parameter budget",
+            "verified": true
+          },
+          {
+            "quote": "SPINDLE, a novel fine-tuning method that injects a trainable low-dimensional update into each attention projection",
+            "verified": true
+          }
+        ],
+        "verified": true,
+        "repaired": false,
+        "agreement": "confirmed"
+      },
+      {
+        "concern": "The claim that 'Even r = 1 recovers most of the gain', offered as evidence that the fine-tuning update is redundant, is not a test of redundancy: r=1 still underperforms full fine-tuning on RTE and CoLA.",
+        "quotes": [
+          {
+            "quote": "Even r = 1 recovers most of the gain, which supports our observation that the fine-tuning update is highly redundant.",
+            "verified": true
+          }
+        ],
+        "verified": true,
+        "repaired": false,
+        "agreement": "possible"
+      }
+    ]
+  },
+  "writing": {
+    "findings": [
+      {
+        "check": "abstract_overclaim",
+        "quote": "We introduce SPINDLE, a new parameter-efficient fine-tuning method that freezes the pretrained weights and edits each attention projection through a trainable low-dimensional injected update",
+        "evidence": [
+          "We apply SPINDLE to the query and value projections of every self-attention layer, and leave the feed-forward layers frozen [No inference latency.]"
+        ],
+        "location": "abstract",
+        "detail": "overstated: The abstract says each attention projection is edited, but the method as evaluated edits only the query and value projections."
+      },
+      {
+        "check": "abstract_overclaim",
+        "quote": "outperforms full fine-tuning on every task of the GLUE benchmark",
+        "evidence": [
+          "Full fine-tuning | 100% | 87.6 | 94.8 | 90.2 | 63.6 | 92.8 | 91.9 | 78.7 | 91.2 [Table 1]"
+        ],
+        "location": "abstract",
+        "detail": "overstated: In Table 1 full fine-tuning beats SPINDLE on MNLI (87.6 vs 86.9) and QQP (91.9 vs 90.6), so SPINDLE does not win on every task."
+      },
+      {
+        "check": "abstract_overclaim",
+        "quote": "Our results are statistically robust",
+        "evidence": [
+          "All numbers come from a single training run with random seed 0 [4 Experiments]"
+        ],
+        "location": "abstract",
+        "detail": "overstated: The results come from a single run with no variance estimates or significance tests, so statistical robustness is not shown."
+      },
+      {
+        "check": "abstract_overclaim",
+        "quote": "establish SPINDLE as the first method to match and exceed full fine-tuning at this parameter budget",
+        "evidence": [
+          "To our knowledge, no prior work directly parameterizes the weight update of attention projections with a trainable low-dimensional factorization while keeping the pretrained weights frozen [2 Related work]"
+        ],
+        "location": "abstract",
+        "detail": "overstated: The paper offers only a hedged novelty statement about the parameterization, not evidence of being first to match full fine-tuning. Its own table shows SPINDLE trailing full fine-tuning on MNLI and QQP."
+      },
+      {
+        "check": "caption_not_standalone",
+        "quote": "GLUE development-set results with RoBERTa-base (single run, seed 0). Trainable parameters are given as a fraction of the model",
+        "evidence": [],
+        "location": "Table 1",
+        "detail": "The caption does not say which metric each column reports (accuracy, Matthews correlation, F1, Pearson); this is given only in the text."
+      },
+      {
+        "check": "caption_not_standalone",
+        "quote": "Effect of the rank r on RoBERTa-base (single run, seed 0",
+        "evidence": [],
+        "location": "Table 2",
+        "detail": "The caption does not state the metrics for SST-2, RTE and CoLA, or that these are development-set scores."
+      }
+    ]
+  }
+}

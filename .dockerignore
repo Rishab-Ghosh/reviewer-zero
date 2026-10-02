@@ -1,0 +1,12 @@
+# Never ship secrets, user data or caches into the image.
+.env
+.env.*
+deploy/*.env
+data/
+reports/
+.venv/
+.git/
+.arena/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/

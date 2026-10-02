@@ -1,0 +1,101 @@
+# D12 leak-filter fixtures that may be public: hand-written, no text from private papers or
+# reviews. The 60 sentences mined from the private dev meta outputs live in
+# data/private/leak_filter_dev.yaml (gitignored); see tests/test_leak_filter.py.
+# Every metric sentence runs with `scores` whose values collide with its numbers.
+metric_scores: [3, 4, 5, 6, 7, 2, 12.4, 4.2, 31.2, 4.5, 3.8, 4.1]
+metric:
+  - The reported FID score of 12.4 uses only 5k samples.
+  - A human-evaluation rating of 4.2 from only 3 annotators is too thin to support the claim.
+  - The BLEU score is 31.2 without variance across runs.
+  - Only 3/5 seeds converge in the ablation.
+  - The method wins on 3/4 benchmarks but loses on the largest one.
+  - A Likert score of 4 out of 5 from crowdworkers is not a reliable quality measure.
+  - The ROUGE-L score of 41.3 is within noise of the baseline.
+  - Accuracy rises from 72.1 to 73.0, a gap smaller than the reported standard deviation.
+  - The F1 score of 88.6 on the dev set is not reported on the test set.
+  - The average rating of 4.5 given by users comes from an unblinded study.
+  - The model solves 7 out of 10 tasks, but the three failures are the hardest ones.
+  - The win rate of 6/10 against the strongest baseline is based on ten prompts.
+  - Table 3 reports a score of 5 on the toxicity scale without defining it.
+  - Perplexity drops by 0.3, which is within the spread of the two runs shown.
+  - The human preference score of 3.8 is computed on a non-random subset.
+  - Only 2/4 datasets show a significant improvement.
+  - The paper's MOS of 4.1 lacks confidence intervals.
+  - Mean IoU of 0.62 is reported from a single seed.
+  - The calibration error falls from 0.08 to 0.05 but the binning is not stated.
+  - Recall@10 of 0.43 over 74 items has a wide confidence interval.
+# Technical vocabulary (speculative decoding, MCMC, rejection sampling, selective
+# classification, OOD detection, recommender systems): legitimate with and without `source`.
+technical:
+  - text: The acceptance probability of drafted tokens is not reported for longer sequences.
+    source: we report the acceptance probability of drafted tokens per position
+  - text: Speculative decoding rejects draft tokens when the target model disagrees, and the paper never reports how often.
+    source: the target model rejects draft tokens that it would not have sampled
+  - text: The Metropolis-Hastings acceptance ratio collapses in high dimensions, which the experiments do not probe.
+    source: the acceptance ratio of the Metropolis-Hastings step
+  - text: The rejection sampling step discards most samples at low temperature.
+    source: a rejection sampling step filters candidate samples
+  - text: The selective classifier's reject option is tuned on the test set.
+    source: the classifier may abstain through a reject option
+  - text: The detector should reject far-OOD inputs, but near-OOD results are missing.
+    source: the detector should reject far-OOD inputs
+  - text: The rejection threshold is chosen per dataset without justification.
+    source: we set the rejection threshold to 0.9
+  - text: A permutation test would reject the null hypothesis at p < 0.05 for only two of the five tasks.
+    source: a permutation test over 1000 shuffles
+  - text: The recommendation system is evaluated on a single public dataset.
+    source: our recommendation system serves 1M users
+  - text: The recommendation model ignores cold-start users.
+    source: the recommendation model is trained on interaction logs
+  - text: Acceptance rates of generated drafts drop sharply after 64 tokens.
+    source: acceptance rates of generated drafts
+  - text: The accept-reject loop in the sampler is not counted in the reported wall-clock time.
+    source: an accept-reject loop draws from the proposal
+  - text: Rejected samples are reused as negatives, which leaks label information.
+    source: rejected samples are kept as hard negatives
+  - text: The method fails to reject the null hypothesis on the smallest benchmark.
+    source: we fail to reject the null hypothesis
+  - text: The verifier's rejection criterion is never ablated.
+    source: the verifier applies a rejection criterion
+  - text: Rejection steps dominate the runtime of the MCMC baseline.
+    source: rejection steps in the MCMC chain
+  - text: The paper does not say how the acceptance region is calibrated.
+    source: the acceptance region of the test
+  - text: The proposal is accepted with probability min(1, r), but r uses an approximate density.
+    source: the proposal is accepted with probability min(1, r)
+  - text: Reward hacking makes the policy reject queries that are hard, inflating the measured score.
+    source: the policy may reject queries it cannot answer
+  - text: The fact-checking model's final verdict quality is never compared with human annotators.
+    source: the final verdict of the fact-checking model
+adversarial:
+  - {text: "A permutation test would reject the null at p < 0.05.", leak: false}
+  - {text: "Performance on borderline examples drops 4 points.", leak: false}
+  - {text: "The recommendation model is evaluated on only one dataset.", leak: false}
+  - {text: "The authors recommend using a larger batch size, but no ablation supports it.", leak: false}
+  - {text: "The ablation would change the conclusion from a 2% gain to no gain.", leak: false}
+  - {text: "Scores on 4/5 tasks improve.", leak: false}
+  - {text: "Raising the threshold moves more inputs into the reject option.", leak: false}
+  - {text: "The accepted answers in the dataset are noisy.", leak: false}
+  - {text: "A seed-variance table for Table 2 would move this from a reject to an accept.", leak: true}
+  - {text: "This would flip my recommendation to acceptance.", leak: true}
+  - {text: "The paper is likely to be rejected in its current form.", leak: true}
+  - {text: "I'd put this around a 6 out of 10.", leak: true}
+  - {text: "My overall score is 5.", leak: true}
+  - {text: "It is a borderline paper; I would lean negative.", leak: true}
+  - {text: "This submission should be accepted.", leak: true}
+  - {text: "Overall, this is a weak accept.", leak: true}
+  - {text: "I would rate this paper a 6.", leak: true}
+  - {text: "The work clears the acceptance bar for ICLR.", leak: true}
+  - {text: "My final rating: 6.", leak: true}
+  - {text: "Overall rating 3/5 given the missing baselines.", leak: true}
+  - {text: "Two results would raise my rating.", leak: true}
+  - {text: "I would move toward a stronger accept if the authors add seeds.", leak: true}
+  - {text: "Conversely, I would lower my assessment if the gain vanished.", leak: true}
+  - {text: "These changes improve the score of the baseline by 2 points.", leak: false}
+  - {text: "Ablations that raise the BLEU score are missing.", leak: false}
+  - {text: "I would raise the rating if the paper provided multi-seed results.", leak: true}
+  - {text: "Better tokenization would raise the rating accuracy of the judge model.", leak: false}
+  - {text: "Only a demonstrated methodological difference from LoRA would make this publishable.", leak: true}
+  - {text: "In its current form the paper is not ready for publication.", leak: true}
+  - {text: "The results are worthy of publication once seeds are added.", leak: true}
+  - {text: "The authors publish their code under an open licence.", leak: false}
